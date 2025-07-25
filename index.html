@@ -3,47 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Financeiro Descomplicado</title>
+  <title>Financeiro Descomplicado - Acesso</title>
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4fff5;
-      color: #333;
+      background-color: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      padding: 30px 20px;
+      padding: 20px;
+    }
+    .card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
       text-align: center;
     }
     h1 {
-      color: #2e7d32;
-      margin-bottom: 10px;
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #333;
     }
     p {
-      font-size: 18px;
-      margin-bottom: 30px;
+      font-size: 16px;
+      margin-bottom: 25px;
+      color: #666;
     }
-    a.button {
-      background-color: #4CAF50;
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #10b981;
       color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      font-size: 18px;
+      font-weight: bold;
+      border: none;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      font-size: 16px;
+      cursor: pointer;
       transition: background-color 0.3s;
     }
-    a.button:hover {
-      background-color: #388e3c;
+    button:hover {
+      background-color: #059669;
     }
   </style>
 </head>
 <body>
-  <h1>Financeiro Descomplicado</h1>
-  <p>Organize suas finanças de forma leve e visual.<br> Clique no botão abaixo para acessar sua planilha.</p>
-  <a href="https://seulinkdocanva.com" target="_blank" class="button">Acessar a Planilha</a>
+  <div class="card">
+    <h1>Acesse sua planilha</h1>
+    <p>Digite seu nome, e-mail e senha para acessar o Financeiro Descomplicado</p>
+    <form onsubmit="acessarPlanilha(event)">
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <input type="email" id="email" placeholder="Seu e-mail" required>
+      <input type="password" id="senha" placeholder="Senha" required>
+      <button type="submit">Acessar</button>
+    </form>
+  </div>
+
+  <script>
+    function acessarPlanilha(e) {
+      e.preventDefault();
+      // Aqui não valida nada, só redireciona
+      window.location.href = "https://financeirodescomplicado.my.canva.site/";
+    }
+  </script>
 </body>
 </html>
